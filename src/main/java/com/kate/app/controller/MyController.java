@@ -26,17 +26,17 @@ public class MyController {
 	
 	@RequestMapping({ "/", "/My" })
 	public String test_controller(HttpServletRequest req, HttpServletResponse resp){
-		//JSONObject json = new JSONObject();
+		JSONObject json = new JSONObject();
 		//String name = myService.test();
 		//json.put("result", "Kate");
 		int id = myService.test();
 		System.out.print(id+"dddd");
 		req.setAttribute("result", id);
-		/*try{
+		try{
 		writeJson(json.toJSONString(),resp);
 		}catch(Exception e){
 			e.printStackTrace();
-		}*/
+		}
 		//return "/My1.jsp";
 		return "/My_H.jsp";
 	}

@@ -14,7 +14,6 @@ public class MyService {
     private MyDb myDb;
 	@Autowired
 	private testD t;
-	
 	@Autowired
     private NewsTrendsDAO newsTrendsDAO;
 	
@@ -35,7 +34,7 @@ public class MyService {
     private MyDb iconDb;
 	
 	public List<MyIcon> getIcon(int pageNum, int pageSize){
-		List<MyIcon> list = new ArrayList<MyIcon>();    //´ÓÊý¾Ý¿âÈ¡³öËùÓÐlist
+		List<MyIcon> list = new ArrayList<MyIcon>();    //ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½list
 		List<MyIcon> temp = new ArrayList<MyIcon>();
 		list=iconDb.test();
 		
