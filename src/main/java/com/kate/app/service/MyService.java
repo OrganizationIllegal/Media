@@ -1,7 +1,12 @@
 package com.kate.app.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+
+
 
 import com.kate.app.dao.MyDb;
 import com.kate.app.dao.NewsTrendsDAO;
@@ -22,8 +27,8 @@ public class MyService {
     private HouseProjectDao houseProjectDao;*/
 	
 	public int test(){
-		NewsTrends object = newsTrendsDAO.findById(1);
-		return object.getId();
+		List<NewsTrends> object = newsTrendsDAO.findAll();
+		return object.size();
 	}
 	
 	public int test_H(){
