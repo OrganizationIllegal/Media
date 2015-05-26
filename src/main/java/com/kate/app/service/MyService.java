@@ -1,13 +1,12 @@
 package com.kate.app.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kate.app.dao.MyDb;
+import com.kate.app.dao.NewsTrendsDAO;
 import com.kate.app.dao.testD;
+import com.kate.app.model.NewsTrends;
 
 @Service
 public class MyService {
@@ -15,12 +14,17 @@ public class MyService {
     private MyDb myDb;
 	@Autowired
 	private testD t;
+	
+	@Autowired
+    private NewsTrendsDAO newsTrendsDAO;
+	
+	
 	/*@Autowired
     private HouseProjectDao houseProjectDao;*/
 	
-	public String test(){
-		String name = t.test();
-		return name;
+	public int test(){
+		NewsTrends object = newsTrendsDAO.findById(1);
+		return object.getId();
 	}
 	
 	public int test_H(){

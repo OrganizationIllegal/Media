@@ -29,7 +29,9 @@ public class MyController {
 		//JSONObject json = new JSONObject();
 		//String name = myService.test();
 		//json.put("result", "Kate");
-		req.setAttribute("result", "Kate");
+		int id = myService.test();
+		System.out.print(id+"dddd");
+		req.setAttribute("result", id);
 		/*try{
 		writeJson(json.toJSONString(),resp);
 		}catch(Exception e){
