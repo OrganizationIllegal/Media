@@ -1,6 +1,6 @@
 package com.kate.app.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * AbstractWinExperience entity provides the base persistence definition of the
@@ -14,7 +14,7 @@ public abstract class AbstractWinExperience implements java.io.Serializable {
 	private Integer id;
 	private StarInfo starInfo;
 	private String detail;
-	private Timestamp time;
+	private Date time;
 
 	// Constructors
 
@@ -23,8 +23,7 @@ public abstract class AbstractWinExperience implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractWinExperience(StarInfo starInfo, String detail,
-			Timestamp time) {
+	public AbstractWinExperience(StarInfo starInfo, String detail, Date time) {
 		this.starInfo = starInfo;
 		this.detail = detail;
 		this.time = time;
@@ -56,11 +55,11 @@ public abstract class AbstractWinExperience implements java.io.Serializable {
 		this.detail = detail;
 	}
 
-	public Timestamp getTime() {
+	public Date getTime() {
 		return this.time;
 	}
 
-	public void setTime(Timestamp time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 

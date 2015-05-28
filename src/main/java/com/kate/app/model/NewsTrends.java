@@ -1,6 +1,6 @@
 package com.kate.app.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * NewsTrends entity. @author MyEclipse Persistence Tools
@@ -15,7 +15,7 @@ public class NewsTrends extends AbstractNewsTrends implements
 	}
 
 	/** full constructor */
-	public NewsTrends(String title, Timestamp time, String detail, String image) {
+	public NewsTrends(String title, Date time, String detail, String image) {
 		super(title, time, detail, image);
 	}
 

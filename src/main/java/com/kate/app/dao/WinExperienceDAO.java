@@ -1,16 +1,16 @@
 package com.kate.app.dao;
 
+import com.kate.app.model.WinExperience;
 
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
+
 import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.criterion.Example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-
-import com.kate.app.model.WinExperience;
 
 /**
  * A data access object (DAO) providing persistence and search support for

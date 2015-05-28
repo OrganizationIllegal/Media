@@ -1,6 +1,6 @@
 package com.kate.app.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * AbstractTrainDetail entity provides the base persistence definition of the
@@ -15,7 +15,7 @@ public abstract class AbstractTrainDetail implements java.io.Serializable {
 	private Train train;
 	private String title;
 	private String detail;
-	private Timestamp time;
+	private Date time;
 	private String trainImg;
 
 	// Constructors
@@ -26,7 +26,7 @@ public abstract class AbstractTrainDetail implements java.io.Serializable {
 
 	/** full constructor */
 	public AbstractTrainDetail(Train train, String title, String detail,
-			Timestamp time, String trainImg) {
+			Date time, String trainImg) {
 		this.train = train;
 		this.title = title;
 		this.detail = detail;
@@ -68,11 +68,11 @@ public abstract class AbstractTrainDetail implements java.io.Serializable {
 		this.detail = detail;
 	}
 
-	public Timestamp getTime() {
+	public Date getTime() {
 		return this.time;
 	}
 
-	public void setTime(Timestamp time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 

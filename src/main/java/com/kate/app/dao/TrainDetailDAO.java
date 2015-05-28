@@ -2,8 +2,9 @@ package com.kate.app.dao;
 
 import com.kate.app.model.TrainDetail;
 
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
+
 import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.criterion.Example;
@@ -150,6 +151,20 @@ public class TrainDetailDAO extends BaseHibernateDAO {
 			log.debug("attach successful");
 		} catch (RuntimeException re) {
 			log.error("attach failed", re);
+			throw re;
+		}
+	}
+	public List findByTrain(String trainid, int value) {
+		log.debug("finding TrainDetail instance with property: " + trainid
+				+ ", value: " + value);
+		try {
+			String queryString = "from TrainDetail as model where model.train."
+					+ trainid + "= ?";
+			Query queryObject = getSession().createQuery(queryString);
+			queryObject.setParameter(0, value);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
 			throw re;
 		}
 	}

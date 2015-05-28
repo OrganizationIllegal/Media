@@ -1,7 +1,6 @@
 package com.kate.app.model;
 
-
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * TrainDetail entity. @author MyEclipse Persistence Tools
@@ -16,10 +15,9 @@ public class TrainDetail extends AbstractTrainDetail implements
 	}
 
 	/** full constructor */
-	public TrainDetail(Train train, String title, String detail,
-			Timestamp time, String trainImg) {
+	public TrainDetail(Train train, String title, String detail, Date time,
+			String trainImg) {
 		super(train, title, detail, time, trainImg);
 	}
-
 
 }

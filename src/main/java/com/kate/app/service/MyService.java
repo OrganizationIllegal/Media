@@ -1,7 +1,12 @@
 package com.kate.app.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+
+
 
 import com.kate.app.dao.MyDb;
 import com.kate.app.dao.NewsTrendsDAO;
@@ -14,7 +19,6 @@ public class MyService {
     private MyDb myDb;
 	@Autowired
 	private testD t;
-	
 	@Autowired
     private NewsTrendsDAO newsTrendsDAO;
 	
@@ -23,8 +27,8 @@ public class MyService {
     private HouseProjectDao houseProjectDao;*/
 	
 	public int test(){
-		NewsTrends object = newsTrendsDAO.findById(1);
-		return object.getId();
+		List<NewsTrends> object = newsTrendsDAO.findAll();
+		return object.size();
 	}
 	
 	public int test_H(){
@@ -35,7 +39,7 @@ public class MyService {
     private MyDb iconDb;
 	
 	public List<MyIcon> getIcon(int pageNum, int pageSize){
-		List<MyIcon> list = new ArrayList<MyIcon>();    //´ÓÊý¾Ý¿âÈ¡³öËùÓÐlist
+		List<MyIcon> list = new ArrayList<MyIcon>();    //ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½list
 		List<MyIcon> temp = new ArrayList<MyIcon>();
 		list=iconDb.test();
 		

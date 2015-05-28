@@ -1,6 +1,6 @@
 package com.kate.app.model;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * AbstractNewsTrends entity provides the base persistence definition of the
@@ -13,7 +13,7 @@ public abstract class AbstractNewsTrends implements java.io.Serializable {
 
 	private Integer id;
 	private String title;
-	private Timestamp time;
+	private Date time;
 	private String detail;
 	private String image;
 
@@ -24,7 +24,7 @@ public abstract class AbstractNewsTrends implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractNewsTrends(String title, Timestamp time, String detail,
+	public AbstractNewsTrends(String title, Date time, String detail,
 			String image) {
 		this.title = title;
 		this.time = time;
@@ -50,11 +50,11 @@ public abstract class AbstractNewsTrends implements java.io.Serializable {
 		this.title = title;
 	}
 
-	public Timestamp getTime() {
+	public Date getTime() {
 		return this.time;
 	}
 
-	public void setTime(Timestamp time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 

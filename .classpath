@@ -22,7 +22,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Program/qqdata/718406390/FileRecv/hibernate-3.3.2.jar"/>
-	<classpathentry kind="lib" path="D:/Program/qqdata/718406390/FileRecv/javassist-3.9.0.jar"/>
+
+	<classpathentry kind="lib" path="lib/hibernate-3.3.2.jar"/>
+	<classpathentry kind="lib" path="lib/javassist-3.9.0.jar"/>
+
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

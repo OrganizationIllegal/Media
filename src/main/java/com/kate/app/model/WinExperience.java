@@ -1,7 +1,6 @@
 package com.kate.app.model;
 
-import java.sql.Timestamp;
-
+import java.util.Date;
 
 /**
  * WinExperience entity. @author MyEclipse Persistence Tools
@@ -16,7 +15,7 @@ public class WinExperience extends AbstractWinExperience implements
 	}
 
 	/** full constructor */
-	public WinExperience(StarInfo starInfo, String detail, Timestamp time) {
+	public WinExperience(StarInfo starInfo, String detail, Date time) {
 		super(starInfo, detail, time);
 	}
 
